@@ -10,34 +10,43 @@ function App() {
   return (
     <Router>
       <div className="container my-4">
-        <h1>Octofit Tracker</h1>
-        <nav className="nav nav-pills mb-4">
-          <NavLink className="nav-link" to="/activities">
-            Activities
-          </NavLink>
-          <NavLink className="nav-link" to="/leaderboard">
-            Leaderboard
-          </NavLink>
-          <NavLink className="nav-link" to="/teams">
-            Teams
-          </NavLink>
-          <NavLink className="nav-link" to="/users">
-            Users
-          </NavLink>
-          <NavLink className="nav-link" to="/workouts">
-            Workouts
-          </NavLink>
-        </nav>
+        <div className="card mb-4 shadow-sm">
+          <div className="card-body">
+            <h1 className="card-title">Octofit Tracker</h1>
+            <p className="card-text">React frontend connected to Django REST API with Codespace URL support.</p>
+            <nav className="nav nav-pills flex-column flex-sm-row">
+              <NavLink to="/activities" className="nav-link" activeclassname="active">
+                Activities
+              </NavLink>
+              <NavLink to="/leaderboard" className="nav-link" activeclassname="active">
+                Leaderboard
+              </NavLink>
+              <NavLink to="/teams" className="nav-link" activeclassname="active">
+                Teams
+              </NavLink>
+              <NavLink to="/users" className="nav-link" activeclassname="active">
+                Users
+              </NavLink>
+              <NavLink to="/workouts" className="nav-link" activeclassname="active">
+                Workouts
+              </NavLink>
+            </nav>
+          </div>
+        </div>
 
-        <Routes>
-          <Route path="/" element={<Navigate to="/activities" replace />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/teams" element={<Teams />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/workouts" element={<Workouts />} />
-          <Route path="*" element={<p>Page not found</p>} />
-        </Routes>
+        <div className="card">
+          <div className="card-body">
+            <Routes>
+              <Route path="/" element={<Navigate to="/activities" replace />} />
+              <Route path="/activities" element={<Activities />} />
+              <Route path="/leaderboard" element={<Leaderboard />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/workouts" element={<Workouts />} />
+              <Route path="*" element={<p>Page not found</p>} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </Router>
   );
