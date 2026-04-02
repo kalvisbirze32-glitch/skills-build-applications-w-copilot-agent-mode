@@ -36,6 +36,18 @@ else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '[::1]']
 
 
+
+
+# CORS settings for Codespaces and local development
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+# For production, use CORS_ALLOWED_ORIGINS = ["https://your-frontend-url"]
+# and set CORS_ALLOW_ALL_ORIGINS = False
+
+# Apply CORS headers to all URLs (including static/manifest)
+CORS_URLS_REGEX = r'^/.*$'
+
 # Application definition
 
 
