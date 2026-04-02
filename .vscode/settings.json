@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
+  "python.pythonPath": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/octofit-tracker/backend",
+    "${workspaceFolder}/octofit-tracker/backend/octofit_tracker"
+  ],
+  "python.venvPath": "${workspaceFolder}/octofit-tracker/backend/venv",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.useImportHeuristic": true
+}
