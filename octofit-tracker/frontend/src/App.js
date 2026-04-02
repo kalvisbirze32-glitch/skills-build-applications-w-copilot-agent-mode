@@ -1,4 +1,5 @@
 import './App.css';
+import smallLogo from './logo.svg';
 import { BrowserRouter as Router, NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
@@ -10,10 +11,17 @@ function App() {
   return (
     <Router>
       <div className="container my-4">
+        <div className="d-flex align-items-center mb-3 p-2 rounded shadow-sm" style={{ background: 'rgba(255,255,255,0.85)' }}>
+          <img src={smallLogo} className="App-logo" alt="Octofit Logo" />
+          <div>
+            <h1 className="h3 mb-0">Octofit Tracker</h1>
+            <p className="small text-muted mb-0">Track users, workouts, teams, activities and leaderboard in your app.</p>
+          </div>
+        </div>
         <div className="card mb-4 shadow-sm">
           <div className="card-body">
-            <h1 className="card-title">Octofit Tracker</h1>
-            <p className="card-text">React frontend connected to Django REST API with Codespace URL support.</p>
+            <h2 className="card-title">Navigation</h2>
+            <p className="card-text">Choose a section to explore data from the backend.</p>
             <nav className="nav nav-pills flex-column flex-sm-row">
               <NavLink to="/activities" className="nav-link" activeclassname="active">
                 Activities
