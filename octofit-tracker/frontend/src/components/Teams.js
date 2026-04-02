@@ -6,7 +6,7 @@ function Teams() {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch('/api/teams/')
+		fetch('https://verbose-goldfish-pj54pvx5pw5xh774x-8000.app.github.dev/api/teams/')
 			.then((res) => {
 				if (!res.ok) throw new Error('Failed to fetch teams');
 				return res.json();

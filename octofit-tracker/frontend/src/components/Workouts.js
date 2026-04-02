@@ -6,7 +6,7 @@ function Workouts() {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch('/api/workouts/')
+		fetch('https://verbose-goldfish-pj54pvx5pw5xh774x-8000.app.github.dev/api/workouts/')
 			.then((res) => {
 				if (!res.ok) throw new Error('Failed to fetch workouts');
 				return res.json();
