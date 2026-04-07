@@ -6,7 +6,7 @@ function Leaderboard() {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch('https://verbose-goldfish-pj54pvx5pw5xh774x-8000.app.github.dev/api/leaderboard/')
+		fetch(`https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`)
 			.then((res) => {
 				if (!res.ok) throw new Error('Failed to fetch leaderboard');
 				return res.json();
